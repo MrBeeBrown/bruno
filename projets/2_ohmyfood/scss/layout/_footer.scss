@@ -1,0 +1,47 @@
+@use "../base/colors" as colors;
+@use "../utils/mixins" as mixins;
+
+footer {
+  padding: 2rem;
+  background-color: colors.$gray-footer;
+  height: 15rem;
+  .logo {
+    padding: 1rem 0.5rem;
+    font-family: "Shrikhand", "cursive";
+    color: colors.$white-font;
+    font-size: 1.2rem;
+  }
+  .submit__restaurant {
+    @include mixins.flex-left(row);
+    @include mixins.footer-text;
+    p {
+      margin-left: 1rem;
+    }
+  }
+  .become__partner {
+    @include mixins.flex-left(row);
+    @include mixins.footer-text;
+    p {
+      margin-left: 0.65rem;
+    }
+  }
+  .legal__notice {
+    @include mixins.footer-text;
+  }
+  .contact {
+    @include mixins.footer-text;
+  }
+  @include mixins.for-tablet {
+    @include mixins.flex-center(column);
+    .logo {
+      font-size: 1.5rem;
+    }
+  }
+  @include mixins.for-desktop {
+    @include mixins.flex-center(row);
+    gap: 2rem;
+    .logo {
+      font-size: 1.9rem;
+    }
+  }
+}

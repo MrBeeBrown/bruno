@@ -1,0 +1,70 @@
+@use "../base/colors" as colors;
+@use "../utils/mixins" as mixins;
+
+.btn__resto {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", "sans-serif";
+  background-image: colors.$gradient;
+  color: colors.$white-font;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  &:hover {
+    background-image: colors.$gradient-light;
+    box-shadow: 0px 6px 15px 3px rgba(0, 0, 0, 0.5);
+  }
+  &:active {
+    background-image: colors.$gradient-light;
+    box-shadow: 0px 6px 15px 3px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+  }
+}
+.btn__new {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: colors.$third-color;
+  color: darken($color: colors.$third-color, $amount: 40);
+  font-family: "Roboto", "sans-serif";
+  font-weight: 700;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  @include mixins.for-desktop {
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+.btn__command {
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem;
+  width: 12rem;
+  font-size: 1rem;
+  font-family: "Roboto", "sans-serif";
+  background-image: colors.$gradient;
+  color: colors.$white-font;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.5);
+  &:hover {
+    background-image: colors.$gradient-light;
+    box-shadow: 0px 6px 15px 3px rgba(0, 0, 0, 0.5);
+  }
+  &:active {
+    background-image: colors.$gradient-light;
+    box-shadow: 0px 6px 15px 3px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+  }
+  @include mixins.for-tablet {
+    width: 24rem;
+    padding: 1rem;
+  }
+  @include mixins.for-desktop {
+    width: 30rem;
+    padding: 1rem;
+  }
+}

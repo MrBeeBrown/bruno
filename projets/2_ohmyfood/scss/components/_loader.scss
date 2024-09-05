@@ -1,0 +1,46 @@
+@use "../base/colors" as colors;
+
+.loader {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: colors.$gray-background;
+  animation: disappear 400ms 2s;
+  animation-fill-mode: forwards;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: colors.$primary-color;
+  margin: 0 1rem;
+  animation: bump infinite 300ms alternate;
+}
+
+.d2 {
+  background: colors.$secondary-color;
+  animation-delay: 0.05s;
+}
+
+.d3 {
+  background: colors.$third-color;
+  animation-delay: 0.1s;
+}
+
+@keyframes bump {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes disappear {
+  to {
+    transform: translateY(100%);
+  }
+}

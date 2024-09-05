@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+:root {
+  --yellow-color: #FFD15B;
+  --black-color: #1B1B1B;
+  --white-color: white;
+  --grey-color: #7A7A7A;
+  --lightgrey-color: #C6C6C6;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  background-color: var(--lightgrey-color);
+  font-family: 'Anton', sans-serif;
+  margin: auto;
+}
+
+.crossed {
+  text-decoration: line-through;
+}
+
+header {
+  background-image: url(/projets/4_petits_plats/assets/header.png);
+  object-fit: cover;
+  width: 100%;
+  height: 667px;
+  margin-bottom: 2rem;
+}
+
+header img {
+  margin: 3rem 0 9rem 3rem;
+}
+
+header h1 {
+  color: var(--yellow-color);
+  font-size: 44px;
+  font-weight: 400;
+  width: 49%;
+  margin: auto;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+header input {
+  width: 100%;
+  height: 5rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: auto;
+  font-size: 1rem;
+  font-family: 'Manrope', sans-serif;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  margin-inline: 4rem;
+}
+
+.search {
+  position: relative;
+  margin: auto;
+  max-width: 55rem;
+  height: 5rem;
+}
+
+.search img {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: .8rem;
+  top: .9rem;
+  cursor: pointer;
+}
+
+.filtres {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtre_selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.filtre_resultat {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.filtre_element_ustensils {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 .5rem;
+  padding: .5rem .5rem .5rem .5rem;
+  background-color: var(--yellow-color);
+  border-radius: .5rem;
+}
+
+.filtre_element_ingredients {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 .5rem;
+  padding: .5rem .5rem .5rem .5rem;
+  background-color: var(--yellow-color);
+  border-radius: .5rem;
+}
+
+.filtre_element_appareils {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0 .5rem;
+  padding: .5rem .5rem .5rem .5rem;
+  background-color: var(--yellow-color);
+  border-radius: .5rem;
+}
+
+.filtre_element_text {
+  font-size: .9rem;
+  font-family: 'Manrope', sans-serif;
+  margin-right: .5rem;
+}
+
+.xmark {
+  margin-left: .5rem;
+  cursor: pointer;
+}
+
+.not_found {
+  font-size: .9rem;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+}
+
+.selections {
+  display: flex;
+  gap: 2rem;
+  width: 34rem;
+}
+
+.ingredients {
+  position: relative;
+  width: 10rem;
+}
+
+.appareils {
+  position: relative;
+  width: 10rem;
+}
+
+.ustensils {
+  position: relative;
+  width: 10rem;
+}
+
+.chevron_down_ingredients {
+  position: absolute;
+  right: .6rem;
+  top: 1rem;
+}
+
+.chevron_down_appareils {
+  position: absolute;
+  right: .6rem;
+  top: 1rem;
+}
+
+.chevron_down_ustensils {
+  position: absolute;
+  right: .6rem;
+  top: 1rem;
+}
+
+.chevron_up_ingredients {
+  display: none;
+  position: absolute;
+  right: .6rem;
+  top: 1rem;
+}
+
+.chevron_up_appareils {
+  display: none;
+  position: absolute;
+  right: .6rem;
+  top: 1rem;
+}
+
+.chevron_up_ustensils {
+  display: none;
+  position: absolute;
+  right: .6rem;
+  top: 1rem;
+}
+
+.dropdown_btn {
+  width: 10rem;
+  height: 3rem;
+  text-align: left;
+  padding-inline: 1rem;
+  border-radius: .5rem;
+  border-style: none;
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+.filtre_ingredients {
+  display: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: .85rem;
+  width: 10rem;
+  position: absolute;
+  background-color: var(--white-color);
+  padding-top: .2rem;
+  border-radius: .5rem;
+  top: 2rem;
+  z-index: 2;
+}
+
+.filtre_ingredients p {
+  margin: 0 0 .3rem .6rem;
+}
+
+.filtre_ingredients p:hover {
+  background-color: var(--yellow-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container_ingredients {
+  height: 16rem;
+  overflow-y: auto;
+}
+
+.filtre_appareils {
+  display: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: .85rem;
+  width: 10rem;
+  position: absolute;
+  background-color: var(--white-color);
+  padding-top: .2rem;
+  border-radius: .5rem;
+  top: 2rem;
+  z-index: 2;
+}
+
+.filtre_appareils p {
+  margin: 0 0 .3rem .6rem;
+}
+
+.filtre_appareils p:hover {
+  background-color: var(--yellow-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container_appareils {
+  height: 16rem;
+  overflow-y: auto;
+}
+
+.filtre_ustensils {
+  display: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: .85rem;
+  width: 10rem;
+  position: absolute;
+  background-color: var(--white-color);
+  padding-top: .2rem;
+  border-radius: .5rem;
+  top: 2rem;
+  z-index: 2;
+}
+
+.filtre_ustensils p {
+  margin: 0 0 .3rem .6rem;
+}
+
+.filtre_ustensils p:hover {
+  background-color: var(--yellow-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container_ustensils {
+  height: 16rem;
+  overflow-y: auto;
+}
+
+#ingredients_search {
+  display: block;
+  width: 9rem;
+  height: 2rem;
+  margin: 1rem auto 1rem auto;
+  border: .15rem var(--lightgrey-color) solid;
+  border-radius: .2rem;
+}
+
+#appareils_search {
+  display: block;
+  width: 9rem;
+  height: 2rem;
+  margin: 1rem auto 1rem auto;
+  border: .15rem var(--lightgrey-color) solid;
+  border-radius: .2rem;
+}
+
+#ustensils_search {
+  display: block;
+  width: 9rem;
+  height: 2rem;
+  margin: 1rem auto 1rem auto;
+  border: .15rem var(--lightgrey-color) solid;
+  border-radius: .2rem;
+}
+
+.magnifying_glass {
+  position: relative;
+  top: -2.7rem;
+  left: 8rem;
+  opacity: .3;
+}
+
+.liste_recettes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 45rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.fiche_recette {
+  position: relative;
+  background-color: var(--white-color);
+  border-radius: 2rem;
+}
+
+.recette_content {
+  margin: 1.5rem;
+}
+
+.fiche_recette img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.timer {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  padding: .3rem .9rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: .75rem;
+  background-color: var(--yellow-color);
+  border-radius: .875rem;
+}
+
+.recette {
+  font-family: 'Manrope', sans-serif;
+  font-size: .75rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.liste_ingredients {
+  font-family: 'Manrope', sans-serif;
+  font-size: .75rem;
+  margin: 1rem 0 1rem;
+  text-transform: uppercase;
+}
+
+.description_recette {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  width: 100%;
+  height: 5rem;
+  text-overflow: ellipsis;
+  /* word-wrap: break-word; */
+  white-space: break-spaces;
+  overflow: hidden;
+}
+
+.content_ingredients {
+  display: grid;
+  grid-template-columns: 9rem 9rem;
+  column-gap: 5rem;
+  /* grid-auto-rows: 3rem; */
+  row-gap: 1rem;
+}
+
+.nom_ingredient {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.nbr_ingredient {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: .7;
+}

@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: unset;
+}

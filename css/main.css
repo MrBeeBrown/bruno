@@ -26,6 +26,14 @@ img, picture, svg, video {
   max-width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p, li, figcaption {
+  max-width: 90ch;
+}
+
 @font-face {
   font-family: 'Poppins-Bold';
   src: url('../fonts/Poppins-Bold.ttf');
@@ -410,7 +418,7 @@ h2 {
   font-family: 'Roboto-Regular';
   font-size: 1rem;
   padding: .5rem 1rem;
-  border: #5171A5 1px solid;
+  border: #5171A5 2px solid;
   border-radius: 6px;
 }
 

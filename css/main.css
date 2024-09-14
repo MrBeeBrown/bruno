@@ -75,9 +75,97 @@ header>a>img {
 
 .mobile__nav {
   display: none;
+  position: relative;
 }
 
-.mobile__menu {}
+.mobile__nav__button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.mobile__nav__button span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  position: absolute;
+  pointer-events: none;
+  transition: opacity 0.3s 0.15s ease-out;
+}
+
+.mobile__nav__button span:nth-child(1),
+.mobile__nav__button span:nth-child(3) {
+  transition: transform 0.3s ease-out;
+}
+
+.mobile__nav__button span:nth-child(1) {
+  transform: translateY(9px);
+}
+
+.mobile__nav__button span:nth-child(3) {
+  transform: translateY(-9px);
+}
+
+.mobile__nav__button.open span:nth-child(1) {
+  transform: translate(0) rotate(135deg);
+}
+
+.mobile__nav__button.open span:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0s ease-out;
+}
+
+.mobile__nav__button.open span:nth-child(3) {
+  transform: translate(0) rotate(-135deg);
+}
+
+.mobile__menu {
+  position: absolute;
+  top: 56px;
+  right: 0px;
+  width: 200px;
+  height: 200px;
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.open__menu {
+  transform: scale(1);
+  transform-origin: top;
+  opacity: 1;
+}
+
+.mobile__menu>ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins-Bold', sans-serif;
+  color: var(--primary-color);
+}
+
+.mobile__menu>ul>li>a {
+  text-decoration: none;
+  color: var(--background-color);
+}
 
 nav>ul {
   display: flex;
@@ -360,12 +448,11 @@ h4::before {
   transform: translate(-50%, -50%);
   padding: .5rem 1rem;
   border: var(--background-color) 3px solid;
-  border-radius: 21px;
+  border-radius: 9px;
 }
 
 .projets__list__card:hover {
-  transform: rotateX(3deg) rotateY(3deg);
-  
+  transform: rotateX(5deg) rotateY(5deg);
   transform-style: preserve-3d;
 }
 
@@ -413,7 +500,7 @@ h4::before {
   border: none;
   cursor: pointer;
   width: 150px;
-  border-radius: 25px;
+  border-radius: 9px;
 }
 
 .projets__list__card__footer>button:hover {
@@ -616,11 +703,12 @@ footer>p {
   }
 
   .hero__img {
-    width: 150px;
+    width: 180px;
+    height: 180px;
   }
 
   .hero>h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 12rem;
   }
 
@@ -657,8 +745,12 @@ footer>p {
   }
 
   .projets__list__card {
-    width: 300px;
+    width: 290px;
     height: 500px;
+  }
+
+  .projets__list__card__img>p {
+    font-size: .8rem;
   }
 
   .projets__list__card__body {

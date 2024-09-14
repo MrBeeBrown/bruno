@@ -21,7 +21,7 @@
 
 <body>
   <header>
-    <img src="/assets/logo_init_code.png" alt="Logo init-code">
+    <a href="https://www.init-code.fr"><img src="/assets/logo_init_code.png" alt="Logo init-code"></a>
     <nav>
       <ul>
         <li>
@@ -39,23 +39,27 @@
       </ul>
     </nav>
     <div class="mobile__nav">
-      <img src="/assets/bars-solid.svg" alt="Menu icon">
-    </div>
-    <div class="mobile__menu hidden">
-      <ul>
-        <li>
-          <a href="#about__me">À Propos</a>
-        </li>
-        <li>
-          <a href="#competences">Competences</a>
-        </li>
-        <li>
-          <a href="#projets">Projets</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
+      <button class="mobile__nav__button" type="button" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile__menu">
+        <ul>
+          <li>
+            <a href="#about__me">À Propos</a>
+          </li>
+          <li>
+            <a href="#competences">Competences</a>
+          </li>
+          <li>
+            <a href="#projets">Projets</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>

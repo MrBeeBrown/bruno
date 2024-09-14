@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://www.init-code.fr/</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Page des projets -->
+  <url>
+    <loc>https://www.init-code.fr/#projects</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page À propos -->
+  <url>
+    <loc>https://www.init-code.fr/#about</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page Contact -->
+  <url>
+    <loc>https://www.init-code.fr/#contact</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Page de téléchargement du CV -->
+  <url>
+    <loc>https://www.init-code.fr/assets/CV_GROS_DESIRS_Bruno.pdf</loc>
+    <lastmod>2024-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

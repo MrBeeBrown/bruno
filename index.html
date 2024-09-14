@@ -5,13 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./css/main.css">
+  <meta name="description"
+    content="Découvrez le portfolio de Bruno GROS DESIRS, développeur passionné spécialisé dans la création de sites web sur mesure. Explorez mes projets et contactez-moi pour une collaboration créative.">
+  <link rel="canonical" href="https://www.init-code.fr">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/css/main-min.css">
   <title>Portfolio - Bruno GROS-DESIRS</title>
 </head>
 
 <body>
   <header>
-    <img src="./assets/logo_init_code.png" alt="Logo">
+    <a href="https://www.init-code.fr"><img src="/assets/logo_init_code.png" alt="Logo init-code"></a>
     <nav>
       <ul>
         <li>
@@ -28,15 +38,31 @@
         </li>
       </ul>
     </nav>
-    <div class="mobile__nav hidden">
-      <img src="./assets/bars-solid.svg" alt="Menu icon">
+    <div class="mobile__nav">
+      <img src="/assets/bars-solid.svg" alt="Menu icon">
+    </div>
+    <div class="mobile__menu hidden">
+      <ul>
+        <li>
+          <a href="#about__me">À Propos</a>
+        </li>
+        <li>
+          <a href="#competences">Competences</a>
+        </li>
+        <li>
+          <a href="#projets">Projets</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
     </div>
   </header>
   <main>
     <div class="hero">
       <h1>Développeur <br>Front-End</h1>
       <div class="hero__img">
-        <img src="./assets/bruno_grosdesirs.png" alt="Bruno GROS-DESIRS">
+        <img src="/assets/bruno_grosdesirs.png" alt="Bruno GROS-DESIRS">
       </div>
     </div>
     <section class="about__me" id="about__me">
@@ -70,7 +96,7 @@
       </div>
       <div class="about__me__cv">
         <button type="button" class="about__me__cv__button"
-          onclick="window.location.href='./assets/CV_GROS_DESIRS_Bruno.pdf'">Télécharger mon CV</button>
+          onclick="window.open('/assets/CV_GROS_DESIRS_Bruno.pdf', '_blank')">Télécharger mon CV</button>
       </div>
     </section>
     <hr>
@@ -82,47 +108,47 @@
       </div>
       <div class="competences__list">
         <div class="competences__list__card">
-          <img src="./assets/html5-brands-solid.svg" alt="HTML logo">
+          <img src="/assets/html5-brands-solid.svg" alt="HTML logo">
           <p>HTML</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/css3-alt-brands-solid.svg" alt="Css logo">
+          <img src="/assets/css3-alt-brands-solid.svg" alt="Css logo">
           <p>CSS</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/js-brands-solid.svg" alt="JavaScript logo">
+          <img src="/assets/js-brands-solid.svg" alt="JavaScript logo">
           <p>JavaScript</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/react-brands-solid.svg" alt="React logo">
+          <img src="/assets/react-brands-solid.svg" alt="React logo">
           <p>React</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/redux.svg" alt="Redux logo">
+          <img src="/assets/redux.svg" alt="Redux logo">
           <p>Redux</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/sass-brands-solid.svg" alt="Sass logo">
+          <img src="/assets/sass-brands-solid.svg" alt="Sass logo">
           <p>Sass</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/docker-brands-solid.svg" alt="Docker logo">
+          <img src="/assets/docker-brands-solid.svg" alt="Docker logo">
           <p>Docker</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/git-alt-brands-solid.svg" alt="Git logo">
+          <img src="/assets/git-alt-brands-solid.svg" alt="Git logo">
           <p>Git</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/npm-brands-solid.svg" alt="Npm logo">
+          <img src="/assets/npm-brands-solid.svg" alt="Npm logo">
           <p>Npm</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/axios.svg" alt="Axios logo">
+          <img src="/assets/axios.svg" alt="Axios logo">
           <p>Axios</p>
         </div>
         <div class="competences__list__card">
-          <img src="./assets/figma-brands-solid.svg" alt="Figma logo">
+          <img src="/assets/figma-brands-solid.svg" alt="Figma logo">
           <p>Figma</p>
         </div>
       </div>
@@ -131,111 +157,102 @@
     <section class="projets" id="projets">
       <h2>Projets</h2>
       <div class="projets__list">
-        <div class="projets__list__card booki">
-          <div class="projets__list__card__summary">
-            <div class="projets__list__card__header">
-              <h3>Projet : Booki</h3>
+        <div class="projets__list__card__3d">
+          <div class="projets__list__card">
+            <div class="projets__list__card__img">
+              <img src="/assets/card_header.png" alt="Blue background">
+              <p>Booki</p>
             </div>
             <div class="projets__list__card__body">
-              <h4>Résumé</h4>
+              <h4>Résumé :</h4>
               <p>L'entreprise souhaite créer un site internet permettant aux utilisateurs de rechercher des hébergements
                 et des activités dans une ville de leur choix. Vous êtes chargé de l'intégration de l'interface du site
-                en HTML et CSS, en collaboration avec Sarah, la CTO, et Loïc, l'UI designer.
-                Loïc a terminé les maquettes pour desktop, tablette et mobile, disponibles sur Figma. Vous devez les
-                intégrer en tenant compte des spécifications et contraintes techniques. Sarah vous demande de livrer le
-                projet sous forme d’un fichier compressé contenant un fichier
-                "index.html" pour le code HTML, un dossier "CSS" avec le fichier "style.css" et un dossier "images" avec
-                toutes les images du site.
-                Le projet sera ensuite consultable une fois terminé.</p>
-              <h4>Technologies utilisées</h4>
+                en HTML et CSS.</p>
+              <h4>Technologies :</h4>
               <div class="projets__list__card__body__technologies">
-                <img src="./assets/html5-brands-solid-white.svg" alt="HTML">
-                <img src="./assets/css3-alt-brands-solid-white.svg" alt="CSS">
-                <img src="./assets/github-brands-solid-white.svg" alt="GitHub">
+                <img src="/assets/html5-brands-solid.svg" alt="HTML">
+                <img src="/assets/css3-alt-brands-solid.svg" alt="CSS">
+                <img src="/assets/github-brands-solid-blue.svg" alt="GitHub">
               </div>
             </div>
             <div class="projets__list__card__footer">
-              <a href="./projets/1_booki/index.html" target="_blank"><button type="button">Voir le projet</button></a>
+              <button type="button" onclick="window.open('/projets/1_booki/index.html', '_blank')">Voir le
+                projet</button>
             </div>
           </div>
         </div>
-        <div class="projets__list__card ohmyfood">
-          <div class="projets__list__card__summary">
-            <div class="projets__list__card__header">
-              <h3>Projet : OhMyFood</h3>
+        <div class="projets__list__card__3d">
+          <div class="projets__list__card">
+            <div class="projets__list__card__img">
+              <img src="/assets/card_header.png" alt="Blue background">
+              <p>OhMyFood</p>
             </div>
             <div class="projets__list__card__body">
-              <h4>Résumé</h4>
-              <p>Vous venez de rejoindre la startup OhMyFood en tant que développeur junior. OhMyFood, déjà présente à
+              <h4>Résumé :</h4>
+              <p>OhMyFood, déjà présente à
                 New York, souhaite s'étendre à Paris et se positionner sur le marché de la restauration. Votre mission
-                est de développer un site "mobile first" qui répertorie les menus de restaurants gastronomiques. Ce site
-                permettra, en plus de la réservation classique, aux clients de composer leur repas à l'avance pour que
-                celui-ci soit prêt à leur arrivée, réduisant ainsi le temps d'attente.
-                Pour débuter, l'équipe commerciale a convaincu 4 restaurateurs d'intégrer leurs menus, et le site
-                proposera donc ces 4 menus dans un premier temps.</p>
-              <h4>Technologies utilisées</h4>
+                est de développer un site "mobile first" qui répertorie les menus de restaurants gastronomiques.</p>
+              <h4>Technologies :</h4>
               <div class="projets__list__card__body__technologies">
-                <img src="./assets/html5-brands-solid-white.svg" alt="HTML">
-                <img src="./assets/css3-alt-brands-solid-white.svg" alt="CSS">
-                <img src="./assets/sass-brands-solid-white.svg" alt="Sass">
-                <img src="./assets/github-brands-solid-white.svg" alt="GitHub">
+                <img src="/assets/html5-brands-solid.svg" alt="HTML">
+                <img src="/assets/css3-alt-brands-solid.svg" alt="CSS">
+                <img src="/assets/sass-brands-solid.svg" alt="Sass">
+                <img src="/assets/github-brands-solid-blue.svg" alt="GitHub">
               </div>
             </div>
             <div class="projets__list__card__footer">
-              <a href="./projets/2_ohmyfood/index.html" target="_blank"><button type="button">Voir le
-                  projet</button></a>
+              <button type="button" onclick="window.open('/projets/2_ohmyfood/index.html', '_blank')">Voir le
+                projet</button>
             </div>
           </div>
         </div>
-        <div class="projets__list__card fisheye">
-          <div class="projets__list__card__summary">
-            <div class="projets__list__card__header">
-              <h3>Projet : FishEye</h3>
+        <div class="projets__list__card__3d">
+          <div class="projets__list__card">
+            <div class="projets__list__card__img">
+              <img src="/assets/card_header.png" alt="Blue background">
+              <p>FishEye</p>
             </div>
             <div class="projets__list__card__body">
-              <h4>Résumé</h4>
-              <p>En tant que développeur junior chez Techasite, une société spécialisée dans le développement de sites
+              <h4>Résumé :</h4>
+              <p>Chez Techasite, une société spécialisée dans le développement de sites
                 web et d'applications mobiles, vous travaillez sur un projet pour un nouveau client, FishEye. Ce site
-                permet aux photographes indépendants de présenter leurs meilleurs travaux. Après une récente levée de
-                fonds, FishEye souhaite mettre à jour son site web. Vous collaborez avec Amanda, votre cheffe de projet,
-                et un designer UI pour mener à bien cette refonte, après une réunion de lancement avec le client.</p>
-              <h4>Technologies utilisées</h4>
+                permet aux photographes indépendants de présenter leurs meilleurs travaux.</p>
+              <h4>Technologies :</h4>
               <div class="projets__list__card__body__technologies">
-                <img src="./assets/html5-brands-solid-white.svg" alt="HTML">
-                <img src="./assets/css3-alt-brands-solid-white.svg" alt="CSS">
-                <img src="./assets/js-brands-solid-white.svg" alt="JavaScript">
-                <img src="./assets/github-brands-solid-white.svg" alt="GitHub">
+                <img src="/assets/html5-brands-solid.svg" alt="HTML">
+                <img src="/assets/css3-alt-brands-solid.svg" alt="CSS">
+                <img src="/assets/js-brands-solid.svg" alt="JavaScript">
+                <img src="/assets/github-brands-solid-blue.svg" alt="GitHub">
               </div>
             </div>
             <div class="projets__list__card__footer">
-              <a href="./projets/3_fisheye/index.html" target="_blank"><button type="button">Voir le projet</button></a>
+              <button type="button" onclick="window.open('/projets/3_fisheye/index.html', '_blank')">Voir le
+                projet</button>
             </div>
           </div>
         </div>
-        <div class="projets__list__card petitsplats">
-          <div class="projets__list__card__summary">
-            <div class="projets__list__card__header">
-              <h3>Projet : Les Petits Plats</h3>
+        <div class="projets__list__card__3d">
+          <div class="projets__list__card">
+            <div class="projets__list__card__img">
+              <img src="/assets/card_header.png" alt="Blue background">
+              <p>Les Petits Plats</p>
             </div>
             <div class="projets__list__card__body">
-              <h4>Résumé</h4>
-              <p>Vous avez été engagé en tant que développeur front-end freelance par l'entreprise "Les petits plats"
+              <h4>Résumé :</h4>
+              <p>Vous êtes développeur front-end freelance par l'entreprise "Les petits plats"
                 pour une mission de 3 mois. Après des années d'édition de livres de cuisine, l'entreprise se lance dans
-                la création de son propre site de recettes, similaire à Marmiton ou 750g. Sandra, la cheffe de projet,
-                est responsable de la digitalisation de l'entreprise et supervise la création du site web. Actuellement,
-                elle travaille exclusivement avec des freelances, en attendant de constituer une équipe interne pour
-                gérer le projet.</p>
-              <h4>Technologies utilisées</h4>
+                la création de son propre site de recettes.</p>
+              <h4>Technologies :</h4>
               <div class="projets__list__card__body__technologies">
-                <img src="./assets/html5-brands-solid-white.svg" alt="HTML">
-                <img src="./assets/css3-alt-brands-solid-white.svg" alt="CSS">
-                <img src="./assets/js-brands-solid-white.svg" alt="JavaScript">
-                <img src="./assets/github-brands-solid-white.svg" alt="GitHub">
+                <img src="/assets/html5-brands-solid.svg" alt="HTML">
+                <img src="/assets/css3-alt-brands-solid.svg" alt="CSS">
+                <img src="/assets/js-brands-solid.svg" alt="JavaScript">
+                <img src="/assets/github-brands-solid-blue.svg" alt="GitHub">
               </div>
             </div>
             <div class="projets__list__card__footer">
-              <a href="./projets/4_petits_plats/index.html" target="_blank"><button type="button">Voir le
-                  projet</button></a>
+              <button type="button" onclick="window.open('/projets/4_petits_plats/index.html', '_blank')">Voir le
+                projet</button>
             </div>
           </div>
         </div>
@@ -245,6 +262,12 @@
     <section class="contact" id="contact">
       <h2>Contact</h2>
       <div class="contact__container">
+        <div class="contact__text">
+          <p>Passionné par la création et l'innovation, je suis toujours à la recherche de nouveaux défis et
+            collaborations. Explorez mon portfolio et ensemble, faisons naître des projets qui repoussent les limites de
+            l'imagination !</p>
+          <img src="/assets/contract.png" alt="Poignée de main">
+        </div>
         <div class="contact__form">
           <form action="https://formsubmit.co/ea146f1b6558428247f9d400c6aecb89" method="POST">
             <label for="name" id="name__label">Nom</label>
@@ -264,21 +287,16 @@
     </section>
   </main>
   <footer>
-    <img src="./assets/logo_init_code_footer.png" alt="Logo">
-    <div>
-      <p>2024 - init-code &reg;</p>
-      <p>
-        <img src="./assets/vcss-blue.png" alt="CSS Valide !">
-      </p>
-    </div>
+    <a href="https://www.init-code.fr"><img src="/assets/logo_init_code_footer.png" alt="Logo init-code"></a>
+    <p>2024 - init-code &reg;</p>
     <div class="footer__socials">
       <a href="https://github.com/MrBeeBrown" target="_blank" rel="noopener noreferrer"><img
-          src="./assets/github-brands-solid.svg" alt="GitHub"></a>
+          src="/assets/github-brands-solid.svg" alt="GitHub"></a>
       <a href="https://www.linkedin.com/in/bruno-grosdesirs/" target="_blank" rel="noopener noreferrer"><img
-          src="./assets/linkedin-brands-solid.svg" alt="LinkedIn"></a>
+          src="/assets/linkedin-brands-solid.svg" alt="LinkedIn"></a>
     </div>
   </footer>
-  <script src="./js/main.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

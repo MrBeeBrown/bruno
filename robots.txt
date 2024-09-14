@@ -1,0 +1,10 @@
+# Bloque l'accès aux dossiers sensibles
+#User-agent: *
+#Disallow: /projets/
+
+# Autorise l'accès à tout le reste
+User-agent: *
+Allow: /
+
+# Fournit le chemin vers le fichier sitemap
+Sitemap: https://www.init-code.fr/sitemap.xml

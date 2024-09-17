@@ -16,6 +16,8 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/css/main-min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript"> (function () { emailjs.init({ publicKey: "6IDuwlETL-3T7wlVf", }); })(); </script>
   <title>Portfolio - Bruno GROS-DESIRS</title>
 </head>
 
@@ -64,10 +66,9 @@
   </header>
   <main>
     <div class="hero">
-      <h1>Développeur <br>Front-End</h1>
-      <div class="hero__img">
-        <img src="/assets/bruno_grosdesirs.png" alt="Bruno GROS-DESIRS">
-      </div>
+      <h1>INIT-CODE<br>Développement<br>Web</h1>
+      <p>Des interfaces réactives,<br>pour un web moderne.</p>
+      <img src="/assets/angles-down-solid.svg" alt="Flèches vers le bas">
     </div>
     <section class="about__me" id="about__me">
       <h2>À propos de moi</h2>
@@ -270,21 +271,20 @@
           <p>Passionné par la création et l'innovation, je suis toujours à la recherche de nouveaux défis et
             collaborations. Explorez mon portfolio et ensemble, faisons naître des projets qui repoussent les limites de
             l'imagination !</p>
-          <img src="/assets/contract.png" alt="Poignée de main">
+          <img src="/assets/bruno_grosdesirs_blue.png" alt="Poignée de main">
         </div>
         <div class="contact__form">
-          <form action="https://formsubmit.co/ea146f1b6558428247f9d400c6aecb89" method="POST">
+          <form method="POST">
             <label for="name" id="name__label">Nom</label>
-            <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
+            <input type="text" id="name" name="name" placeholder="Entrez votre nom" autocomplete="family-name" required>
             <label for="lastname" id="lastname__label">Prénom</label>
-            <input type="text" id="lastname" name="lastname" placeholder="Entrez votre prénom" required>
+            <input type="text" id="lastname" name="lastname" placeholder="Entrez votre prénom" autocomplete="given-name"
+              required>
             <label for="email" id="email__label">Email</label>
-            <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
+            <input type="email" id="email" name="email" placeholder="Entrez votre email" autocomplete="email" required>
             <label for="message" id="message__label">Message</label>
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
             <textarea id="message" name="message" placeholder="Entrez votre message" rows="6" required></textarea>
-            <input type="submit" value="Envoyer" id="submit">
+            <input type="button" value="Envoyer" id="submit" onClick="sendEmailJs()">
           </form>
         </div>
       </div>

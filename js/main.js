@@ -7,18 +7,40 @@ mobileNav.addEventListener('click', () => {
   mobileNav.getAttribute('aria-expanded') === 'true' ? mobileNav.setAttribute('aria-expanded', 'false') : mobileNav.setAttribute('aria-expanded', 'true');
 })
 
+function sendEmailJs() {
+  let params = {
+    name: document.getElementById('name').value,
+    lastname: document.getElementById('lastname').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value
+  }
 
+  emailjs.send("service_q9zdngm", "template_5hlinbs", params).then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+      alert("Votre message a bien été envoyé. Merci pour votre message !");
+      document.getElementById('name').value = "";
+      document.getElementById('lastname').value = "";
+      document.getElementById('email').value = "";
+      document.getElementById('message').value = "";
+    },
+    function (error) {
+      console.log("FAILED...", error);
+      alert("Votre message n'a pas été envoyé. Une erreur est survenue !");
+    }
+  )
+}
 
 /* let validFirst = false;
 let validLast = false;
 let validEmail = false;
 
 
-const getPrenom = document.querySelector("#first");
+const getPrenom = document.querySelector("#lastname");
 getPrenom.addEventListener("input", validatePrenom);
 
 
-const getNom = document.querySelector("#last");
+const getNom = document.querySelector("#name");
 getNom.addEventListener("input", validateNom);
 
 
